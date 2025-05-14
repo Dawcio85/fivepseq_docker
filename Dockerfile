@@ -1,17 +1,14 @@
 # Base image
-FROM python:3.7.12
+FROM python:3.8.0
 
 # Set working directory
 WORKDIR /data
 
-# Copy requirements.txt
+# Copy requirements.txt and install dependencies
 COPY requirements.txt .
-
-# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Install fivepseq
-# Copy fivepseq repository cloned from GitHub
+# Copy fivepseq repository cloned from GitHub and install it
 COPY fivepseq ./fivepseq
 RUN cd fivepseq && python setup.py install
 
