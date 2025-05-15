@@ -8,12 +8,15 @@ WORKDIR /data
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy fivepseq repository cloned from GitHub and install it
+# Copy fivepseq repository cloned from GitHub and install from it
 COPY fivepseq ./fivepseq
 RUN cd fivepseq && python setup.py install
 
+# Copy the test data
+COPY demo_data ./demo_data
+
 # Main entrypoint
-# ENTRYPOINT ["fivepseq --version"]
+# ENTRYPOINT ["fivepseq", "--version"]
 
 # Set default command
-CMD ["/bin/bash"]
+CMD ["fivepseq", "--version"]
