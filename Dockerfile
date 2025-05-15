@@ -15,8 +15,5 @@ RUN cd fivepseq && python setup.py install
 # Copy the test data
 COPY demo_data ./demo_data
 
-# Main entrypoint
-# ENTRYPOINT ["fivepseq", "--version"]
-
 # Set default command
 CMD ["fivepseq", "--version"]
