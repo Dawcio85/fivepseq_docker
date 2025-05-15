@@ -1,6 +1,7 @@
 # Fivepseq Docker Usage
 
 This guide explains how to pull, run, and test the Fivepseq Docker image from Docker Hub.
+- For more information about Fivepseq visit the official repository on GitHub: https://github.com/lilit-nersisyan/fivepseq.
 
 ## 1. Pull the Image from Docker Hub
 
@@ -49,6 +50,5 @@ This will give you an interactive bash shell with Fivepseq and all dependencies 
   ```bash
   docker run -it -v $(pwd)/my_data:/data/my_data dawcio85/fivepseq:v1 /bin/bash
   ```
-- For more information about Fivepseq visit the official repository on GitHub: https://github.com/lilit-nersisyan/fivepseq.
 
 ---
