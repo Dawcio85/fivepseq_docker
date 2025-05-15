@@ -43,7 +43,7 @@ This will give you an interactive bash shell with Fivepseq and all dependencies 
 
 ## 5. Notes
 
-- The Docker image was tested on Linux, macOS (Apple Silicon M2), and Windows 10.
+- The Docker image was tested on Linux, macOS (Apple Silicon M2), and Windows 11.
 - If you want to mount local data into the container, use the `-v` option. For example:
 
   ```bash
